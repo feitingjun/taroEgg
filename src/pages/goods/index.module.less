@@ -1,0 +1,238 @@
+@import '~@/styles/common.less';
+.container{
+  background: #f5f5f5;
+}
+.swiper{
+  width: 100%;
+  height: 750px;
+  background: #fff;
+  Image{
+    width: 100%;
+    height: 100%;
+  }
+}
+.goodsNameBox{
+  padding: 30px;
+  background: #fff;
+  margin-bottom: 20px;
+  .goodsName{
+    font-size: 30px;
+  }
+}
+.priceBox{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  height: 60px;
+  .price{
+    display: flex;
+    align-items: flex-end;
+    View{
+      &:nth-child(1){
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 40px;
+        color: @price-color;
+        margin-right: 10px;
+        Text{
+          font-size: 50px;
+        }
+      }
+      &:nth-child(2){
+        font-size: 20px;
+        color: #999;
+        text-decoration: line-through;
+        Text{
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+.collectBox{
+  .collect{
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    color: #555;
+    .red{
+      font-size: 18;
+    }
+    Image{
+      width: 30px;
+      height: 30px;
+      margin-bottom: 5px;
+    }
+  }
+}
+.sales{
+  font-size: 20px;
+  color: #999;
+  padding-top: 15px;
+}
+.commentBox{
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 30px;
+  .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 0;
+    View{
+      display: flex;
+      align-items: center;
+      &:last-of-type{
+        &>Image{
+          width: 30px;
+          height: 30px;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .commentTotal{
+    font-size: 24px;
+    padding-left: 20px;
+    font-weight: 400;
+    color: #999;
+  }
+  .goodComment{
+    font-size: 26px;
+    margin-right: 10px;
+    color: #999;
+    font-weight: 400;
+  }
+  .commentList{
+    .commentItem{
+      padding: 20px 0;
+      .borderBottom();
+      &:last-of-type{
+        &::after{
+          border-bottom: none;
+        }
+      }
+      .commentUser{
+        display: flex;
+        align-items: center;
+        &>Image{
+          width: 80px;
+          height: 80px;
+          overflow: hidden;
+          border-radius: 50%;
+          margin-right: 20px;
+        }
+        &>View{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          font-size: 30px;
+          .userName{
+            margin-bottom: 5px;
+          }
+          .rate{
+            Text{
+              font-size: 20px;
+            }
+          }
+        }
+      }
+      .content{
+        font-size: 26px;
+        padding-top: 15px;
+      }
+      .picture{
+        margin-top: 20px;
+        border-radius: 10px;
+        display: flex;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        Image{
+          width: 150px;
+          height: 150px;
+          margin-right: 10px;
+          display: block;
+          flex-shrink: 0;
+          &:last-of-type{
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+.parameter{
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 30px;
+  .parameterList{
+    .parameterItem{
+      font-size: 26px;
+      color: #555;
+      .borderLeft();
+      .borderBottom();
+      .borderRight();
+      &::after{
+        border-color: #ddd;
+      }
+      &:first-of-type{
+        .borderTop();
+        &::after{
+          border-color: #ddd;
+        }
+      }
+      View{
+        display: inline-flex;
+        align-items: center;
+        padding: 20px 30px;
+        &:first-of-type{
+          width: 33%;
+          .borderRight();
+          &::after{
+            border-color: #ddd;
+          }
+        }
+        &:last-of-type{
+          width: 67%;
+        }
+      }
+    }
+  }
+}
+.not{
+  text-align: center;
+  font-size: 30px;
+  line-height: 80px;
+  color: #ddd;
+}
+.detailBox{
+  padding-top: 30px;
+  margin-bottom: 20px;
+  background: #fff;
+  .title{
+    padding-left: 20px;
+  }
+}
+:global(.taro_html){
+  padding: 0 10px;
+  :global(.img){
+    vertical-align: middle;
+  }
+}
+.title{
+  font-size: 30px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  Image{
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+  }
+}

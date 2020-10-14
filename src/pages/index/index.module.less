@@ -1,0 +1,114 @@
+@import '~@/styles/common.less';
+.container{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  overflow: auto;
+}
+.header{
+  padding: 20px;
+  height: 100px;
+  background: @color-brand;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  .search{
+    flex: 1;
+    background: #f1f1f1;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 24px;
+    color: #999;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    .searchIcon{
+      font-size: 30px !important;
+      color: #999 !important;
+      margin-right: 10px;
+      margin-top: 4px;
+    }
+  }
+  :global(.iconfont){
+    font-size: 40px !important;
+    flex-shrink: 0;
+    margin-left: 20px;
+  }
+}
+.swiper{
+  width: 100%;
+  height: 400px;
+  Image{
+    width: 100%;
+    height: 100%;
+  }
+}
+.homeNav{
+  padding: 30px 0;
+  &>View{
+    width: 25%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    Image{
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+    Text{
+      font-size: 28px;
+    }
+  }
+}
+.recommend{
+  padding: 0 30px 30px 30px;
+  .column{
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    &:first-of-type{
+      padding-right: 15px;
+    }
+    &:last-of-type{
+      padding-left: 15px;
+    }
+    .item{
+      width: 100%;
+      margin-bottom: 30px;
+      Image{
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+      }
+      .price{
+        margin-bottom: 10px;
+        &>Text{
+          &:last-of-type{
+            font-size: 24px;
+            color: #999;
+            text-decoration: line-through; 
+            text{
+              font-size: 18px;
+            }
+          }
+          &:first-of-type{
+            font-size: 36px;
+            margin-right: 20px;
+            color: @price-color;
+            text-decoration: none; 
+            text{
+              font-size: 24px;
+            }
+          }
+        }
+      }
+      .name{
+        font-size: 26px;
+        color: #555;
+      }
+    }
+  }
+}

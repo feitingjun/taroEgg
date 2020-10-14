@@ -1,0 +1,124 @@
+@import '~@/styles/common.less';
+.container{
+  display: flex;
+  padding-bottom: 100px;
+}
+.tabBar{
+  width: 200px;
+  flex-shrink: 0;
+  height: 100%;
+  padding: 20px 0;
+  font-size: 30px;
+  background: #f8f8f8;
+  View{
+    text-align: center;
+    padding: 25px 0;
+    &.currentTab{
+      background: #fff;
+      color: @color-brand;
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 15%;
+        height: 70%;
+        width: 4px;
+        background: @color-brand;
+      }
+    }
+  }
+}
+.content{
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+  padding: 30px;
+  padding-right: 0;
+  .listItem{
+    background: #fff;
+    padding-top: 100px;
+    padding-right: 30px;
+    &:first-of-type{
+      padding-top: 0;
+    }
+  }
+  .title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+    &::before{
+      content: '';
+      display: inline-block;
+      height: 1px;
+      flex: 1;
+      background: #f1f1f1;
+      margin-right: 20px;
+      transform-origin: right;
+      transform: scale(0.5);
+    }
+    &::after{
+      content: '';
+      display: inline-block;
+      height: 1px;
+      flex: 1;
+      background: #f1f1f1;
+      margin-left: 20px;
+      transform-origin: left;
+      transform: scale(0.5);
+    }
+  }
+  .con{
+    .item{
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+      Image{
+        width: 160px;
+        height: 160px;
+        flex-shrink: 0;
+        margin-right: 20px;
+        border-radius: 6px;
+      }
+      &>View{
+        .price{
+          font-size: 22px;
+          color: @price-color;
+          margin-bottom: 10px;
+          &>Text{
+            &:last-of-type{
+              font-size: 24px;
+              color: #999;
+              text-decoration: line-through; 
+              text{
+                font-size: 18px;
+              }
+            }
+            &:first-of-type{
+              font-size: 36px;
+              margin-right: 20px;
+              color: @price-color;
+              text-decoration: none; 
+              text{
+                font-size: 24px;
+              }
+            }
+          }
+        }
+        .goodsName{
+          font-size: 26px;
+        }
+      }
+    }
+  }
+}
+.not{
+  text-align: center;
+  font-size: 26px;
+  color: #999;
+}
