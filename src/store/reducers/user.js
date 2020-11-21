@@ -5,7 +5,7 @@ const INITIAL_STATE = {
   currentTab: 0
 }
 
-export default function user (state = INITIAL_STATE, action) {
+export default function user(state = INITIAL_STATE, action) {
   switch (action.type) {
     case SAVE_USER_INFO:
       return {
